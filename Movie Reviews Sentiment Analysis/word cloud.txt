@@ -1,0 +1,19 @@
+# Create a function to generate word clouds
+def generate_wordcloud(df, title):
+    # Concatenate all the review texts for the given sentiment label
+    text = ' '.join(df['comment_processed'].tolist())
+
+    # Generate the word cloud
+    wordcloud = WordCloud(width=800, height=800, background_color='white').generate(text)
+
+    # Plot the word cloud
+    plt.figure(figsize=(8,8))
+    plt.imshow(wordcloud)
+    plt.axis('off')
+    plt.title(title, fontsize=20)
+    plt.show()
+
+# Generate word clouds for positive, neutral, and negative reviews
+generate_wordcloud(df[df['sentiment']=='positive'], 'Positive Reviews Word Cloud')
+generate_wordcloud(df[df['sentiment']=='neutral'], 'Neutral Reviews Word Cloud')
+generate_wordcloud(df[df['sentiment']=='negative'], 'Negative Reviews Word Cloud')
