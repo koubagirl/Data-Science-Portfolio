@@ -39,4 +39,4 @@ You can install the required dependencies using pip:
 
 For any questions or issues related to this project, please feel free to reach out to:
 
-Email: [koubagirl@hotmail.com](mailto:koubagirl@hotmail.com)
+Email: [koubagirl@gmail.com](mailto:koubagirl@gmail.com)
